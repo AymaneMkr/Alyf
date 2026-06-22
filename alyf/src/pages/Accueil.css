@@ -1,0 +1,251 @@
+/* ── Utilitaires ── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 48px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #002147;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* ── Hero ── */
+.hero {
+  background-color: #002147;
+  padding: 120px 24px;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 52px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #c5d5e8;
+  max-width: 620px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ── Citation ── */
+.citation {
+  background-color: #f5f7fa;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.citation blockquote {
+  font-size: 18px;
+  font-style: italic;
+  color: #444;
+  max-width: 780px;
+  margin: 0 auto 16px;
+  line-height: 1.8;
+}
+
+.citation cite {
+  font-size: 15px;
+  color: #002147;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ── Services ── */
+.services {
+  padding: 100px 24px;
+  background-color: #ffffff;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e8edf2;
+  border-radius: 12px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+  color: inherit;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ── Chiffres ── */
+.chiffres {
+  background-color: #002147;
+  padding: 80px 24px;
+}
+
+.chiffres-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.chiffre-valeur {
+  display: block;
+  font-size: 52px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.chiffre-label {
+  font-size: 16px;
+  color: #8ab0d0;
+}
+
+/* ── Références ── */
+.references {
+  padding: 100px 24px;
+  background-color: #ffffff;
+}
+
+.references-grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.reference-logo {
+  background: #f5f7fa;
+  border: 1px solid #e0e6ed;
+  border-radius: 10px;
+  padding: 24px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+  min-width: 160px;
+  text-align: center;
+}
+
+/* ── Certifications ── */
+.certifications {
+  background-color: #f5f7fa;
+  padding: 80px 24px;
+}
+
+.certif-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.certif-item {
+  text-align: center;
+}
+
+.certif-badge {
+  background-color: #002147;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.certif-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ── CTA ── */
+.cta {
+  background-color: #002147;
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 32px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .chiffres-grid { grid-template-columns: 1fr; gap: 40px; }
+}
