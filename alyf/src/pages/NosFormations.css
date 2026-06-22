@@ -1,0 +1,353 @@
+/* ── Utilitaires ── */
+.formations-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.formations-page .section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 40px;
+}
+
+/* ── Hero ── */
+.formations-hero {
+  background-color: #002147;
+  padding: 100px 24px 80px;
+}
+
+.formations-hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.formations-hero p {
+  font-size: 18px;
+  color: #c5d5e8;
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.formations-hero strong {
+  color: #ffffff;
+}
+
+/* ── Modalités ── */
+.modalites {
+  padding: 80px 24px;
+  background-color: #f5f7fa;
+}
+
+.modalites-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.modalite-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.modalite-icon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.modalite-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 8px;
+}
+
+.modalite-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ── Catalogue ── */
+.catalogue {
+  padding: 80px 24px;
+  background-color: #ffffff;
+}
+
+/* Barre de recherche */
+.search-bar {
+  position: relative;
+  max-width: 560px;
+  margin: 0 auto 32px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 14px 48px 14px 44px;
+  border: 2px solid #e0e6ed;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-bar input:focus {
+  border-color: #0077cc;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.search-clear {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #999;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.search-clear:hover {
+  color: #333;
+}
+
+/* Filtres */
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.filtre-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border: 2px solid #e0e6ed;
+  border-radius: 999px;
+  background: #ffffff;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filtre-btn:hover {
+  border-color: #002147;
+  color: #002147;
+}
+
+.filtre-btn.actif {
+  color: #ffffff;
+  background-color: #002147;
+  border-color: #002147;
+}
+
+.filtre-count {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.filtre-btn.actif .filtre-count {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Résultats */
+.resultats-info {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 32px;
+}
+
+/* Grille cartes */
+.catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── Carte formation ── */
+.carte {
+  border: 1px solid #e8edf2;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  background: #ffffff;
+}
+
+.carte:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+}
+
+.carte-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carte-categorie {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 1.5px solid;
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.carte-ref {
+  font-size: 11px;
+  color: #aaa;
+  font-weight: 500;
+}
+
+.carte-titre {
+  font-size: 15px;
+  font-weight: 600;
+  color: #002147;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.carte-infos {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.carte-info {
+  font-size: 13px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.info-icon {
+  font-size: 14px;
+}
+
+.carte-btn {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 9px 18px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--btn-color);
+  border: 1.5px solid var(--btn-color);
+  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.carte-btn:hover {
+  background-color: var(--btn-color);
+  color: #ffffff;
+}
+
+/* Aucun résultat */
+.aucun-resultat {
+  text-align: center;
+  padding: 60px 24px;
+  color: #888;
+}
+
+.aucun-resultat p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.aucun-resultat button {
+  padding: 10px 24px;
+  background: #002147;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+/* ── CTA ── */
+.formations-cta {
+  background-color: #002147;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.formations-cta h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.formations-cta p {
+  font-size: 16px;
+  color: #8ab0d0;
+  max-width: 560px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #ffffff;
+  color: #002147;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.cta-btn:hover {
+  opacity: 0.88;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .catalogue-grid { grid-template-columns: repeat(2, 1fr); }
+  .modalites-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .formations-hero h1 { font-size: 32px; }
+  .catalogue-grid { grid-template-columns: 1fr; }
+  .modalites-grid { grid-template-columns: 1fr; }
+  .filtres { justify-content: flex-start; }
+}

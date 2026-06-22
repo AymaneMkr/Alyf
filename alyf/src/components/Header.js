@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/logo-alyf-blanc-bleu.png';
 import './Header.css';
-
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -17,7 +17,9 @@ function Header() {
   return (
     <header className="header">
       <div className="header-inner">
-        <Link to="/" className="logo">alyf<span>pro</span></Link>
+        <Link to="/" className="logo" aria-label="ALYF Pro - Accueil">
+          <img src={logo} alt="ALYF Pro" className="logo-image" />
+        </Link>
         <nav className={`nav ${menuOpen ? 'open' : ''}`}>
           {navLinks.map(link => (
             <Link

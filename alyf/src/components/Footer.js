@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo-alyf-blanc-bleu.png';
+import linkedinLogo from '../assets/logo-linkedin.png';
 import './Footer.css';
 
 function Footer() {
@@ -7,8 +9,10 @@ function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-col">
-          <div className="footer-logo">alyf<span>pro</span></div>
-          <p>Organisme de formation IT basé à Lyon, certifié Qualiopi et référencé Datadock.</p>
+          <div className="footer-logo">
+            <img src={logo} alt="ALYF Pro" className="logo-image" />
+          </div>
+          <p>Organisme de formation IT, certifié Qualiopi et référencé Datadock.</p>
         </div>
         <div className="footer-col">
           <h4>Navigation</h4>
@@ -21,7 +25,10 @@ function Footer() {
         <div className="footer-col">
           <h4>Contact</h4>
           <p>contact@alyfpro.fr</p>
-          <p>Lyon, Auvergne-Rhône-Alpes</p>
+          <p>55 rue Charles de Gaulle 42000 Saint Etienne</p>
+          <a className="linkedin-link" href="https://www.linkedin.com/in/alyf-sarl-a63895230/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn ALYF">
+            <img src={linkedinLogo} alt="LinkedIn" className="linkedin-logo" />
+          </a>
         </div>
       </div>
       <div className="footer-legal">

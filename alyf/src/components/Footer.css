@@ -1,7 +1,8 @@
 .footer {
   background-color: #002147;
-  color: #cccccc;
+  color: #cbd5e1;
   margin-top: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .footer-inner {
@@ -21,13 +22,13 @@
 }
 
 .footer-logo span {
-  color: #0077cc;
+  color: #2f80ed;
 }
 
 .footer-col p {
   font-size: 14px;
   line-height: 1.7;
-  color: #aaaaaa;
+  color: #cbd5e1;
 }
 
 .footer-col h4 {
@@ -40,7 +41,7 @@
 .footer-col a {
   display: block;
   font-size: 14px;
-  color: #aaaaaa;
+  color: #cbd5e1;
   margin-bottom: 8px;
   transition: color 0.2s;
 }
@@ -49,16 +50,33 @@
   color: #ffffff;
 }
 
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.linkedin-logo {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
 .footer-legal {
-  border-top: 1px solid #1a3a5c;
+  display: inline-flex;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   text-align: center;
   padding: 20px 24px;
   font-size: 11px;
-  color: #666666;
+  color: #94a3b8;
 }
-
-.footer-legal a {
-  color: #888888;
+.logo-image {
+  display: block;
+  height: 42px;
+  width: auto;
+  color: #7cc0ff;
   transition: color 0.2s;
 }
 
