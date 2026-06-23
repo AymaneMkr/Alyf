@@ -1,42 +1,57 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/logo-alyf-blanc-bleu.png';
 import './Header.css';
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
-    { path: '/', label: 'Accueil' },
-    { path: '/nos-formations', label: 'Nos Formations' },
-    { path: '/conseil-entreprise', label: 'Conseil Entreprise' },
-    { path: '/integration', label: 'Intégration' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/nos-formations', label: 'Formations' },
+    { path: '/entreprises',    label: 'Entreprises' },
+    { path: '/contact',        label: 'Contact' },
   ];
 
   return (
-    <header className="header">
-      <div className="header-inner">
-        <Link to="/" className="logo" aria-label="ALYF Pro - Accueil">
-          <img src={logo} alt="ALYF Pro" className="logo-image" />
-        </Link>
-        <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-          {navLinks.map(link => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        <button className="burger" onClick={() => setMenuOpen(!menuOpen)}>
-          <span /><span /><span />
-        </button>
+    <>
+      {/* Bandeau supérieur */}
+      <div className="topbar">
+        <span>Organisme de formation IT · Certifié Qualiopi · Saint-Étienne</span>
+        <a href="mailto:contact@alyfpro.fr">contact@alyfpro.fr</a>
       </div>
-    </header>
+
+      <header className="header">
+        <div className="header-inner">
+          <Link to="/" className="logo">
+            alyf<span>pro</span>
+          </Link>
+
+          <nav className={`nav ${menuOpen ? 'open' : ''}`}>
+            {navLinks.map(link => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`nav-link ${location.pathname.startsWith(link.path) ? 'active' : ''}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link to="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
+              Demander un devis
+            </Link>
+          </nav>
+
+          <button
+            className="burger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
+          >
+            <span /><span /><span />
+          </button>
+        </div>
+      </header>
+    </>
   );
 }
 

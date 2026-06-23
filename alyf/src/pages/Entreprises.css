@@ -1,0 +1,265 @@
+.entreprises-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #7ab3d8;
+  margin-bottom: 12px;
+}
+
+/* ── Hero ── */
+.ent-hero {
+  background: linear-gradient(135deg, #001a3a 0%, #002d5c 100%);
+  padding: 100px 24px 80px;
+}
+
+.ent-hero h1 {
+  font-size: 44px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.ent-hero p {
+  font-size: 17px;
+  color: #a0bdd8;
+  max-width: 560px;
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+.btn-hero-ent {
+  display: inline-block;
+  padding: 13px 28px;
+  background: #fff;
+  color: #002147;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.btn-hero-ent:hover { opacity: 0.9; }
+
+/* ── Onglets ── */
+.ent-onglets {
+  padding: 80px 24px;
+  background: #fff;
+}
+
+.onglet-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.onglet-tab {
+  padding: 12px 28px;
+  border: 2px solid #e0e6ed;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.onglet-tab:hover { border-color: #002147; color: #002147; }
+.onglet-tab.actif { background: #002147; border-color: #002147; color: #fff; }
+
+.onglet-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.onglet-intro h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 14px;
+}
+
+.onglet-intro p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.atouts-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.atouts-list li {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.btn-contact-ent {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0077cc;
+  text-decoration: none;
+}
+.btn-contact-ent:hover { text-decoration: underline; }
+
+.services-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.service-mini {
+  background: #f8fafc;
+  border: 1px solid #e8edf2;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.service-mini-icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.service-mini h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 6px;
+}
+
+.service-mini p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ── Méthode ── */
+.methode {
+  background: #f5f7fa;
+  padding: 80px 24px;
+}
+
+.methode h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #002147;
+  margin: 8px 0 48px;
+}
+
+.etapes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+.etape {
+  position: relative;
+  text-align: center;
+  padding: 0 12px;
+}
+
+.etape-num {
+  width: 52px;
+  height: 52px;
+  background: #002147;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.etape h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 8px;
+}
+
+.etape p {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
+}
+
+.etape-line {
+  position: absolute;
+  top: 26px;
+  right: -12px;
+  width: 24px;
+  height: 2px;
+  background: #e0e6ed;
+}
+
+/* ── CTA ── */
+.ent-cta {
+  background: #002147;
+  padding: 90px 24px;
+  text-align: center;
+}
+
+.ent-cta h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.ent-cta p {
+  font-size: 16px;
+  color: #7a9fc0;
+  max-width: 480px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+.btn-primary-ent {
+  display: inline-block;
+  padding: 13px 32px;
+  background: #fff;
+  color: #002147;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.btn-primary-ent:hover { opacity: 0.9; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .onglet-content { grid-template-columns: 1fr; gap: 36px; }
+  .services-mini-grid { grid-template-columns: 1fr; }
+  .etapes-grid { grid-template-columns: repeat(2, 1fr); }
+  .etape-line { display: none; }
+}
+
+@media (max-width: 600px) {
+  .ent-hero h1 { font-size: 30px; }
+  .etapes-grid { grid-template-columns: 1fr; }
+  .onglet-tabs { flex-direction: column; }
+}

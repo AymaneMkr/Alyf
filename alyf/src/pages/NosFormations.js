@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import './NosFormations.css';
+import { useSearchParams } from 'react-router-dom';
 
 // ── Données ──────────────────────────────────────────────
 const formations = [
@@ -103,8 +104,13 @@ function CarteFormation({ formation }) {
 
 // ── Page principale ───────────────────────────────────────
 function NosFormations() {
-  const [categorieActive, setCategorieActive] = useState("Toutes");
-  const [recherche, setRecherche]             = useState("");
+  const [searchParams] = useSearchParams();
+    const [categorieActive, setCategorieActive] = useState(
+      searchParams.get('cat') || "Toutes"
+    );
+    const [recherche, setRecherche] = useState(
+      searchParams.get('q') || ""
+    );
 
   const formationsFiltrees = useMemo(() => {
     return formations.filter((f) => {
