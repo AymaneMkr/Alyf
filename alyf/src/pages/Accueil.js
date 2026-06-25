@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Accueil.css';
+import logoConfiancePresident from '../assets/logo-confiance-president.jpg';
+import logoConfianceOrt from '../assets/logo-confiance-ort.png';
+import logoConfianceOrsys from '../assets/logo-confiance-orsys.jpg';
+import logoConfianceMga from '../assets/logo-confiance-mga.png';
+import logoConfianceM2i from '../assets/logo-confiance-m2i.jpg';
+import logoConfianceIsitech from '../assets/logo-confiance-isitech.png';
+import logoConfianceFitech from '../assets/logo-confiance-fitech.png';
+import logoConfianceEdugroupe from '../assets/logo-confiance-edugroupe.png';
+import logoConfianceDelcoupe from '../assets/logo-confiance-delcoupe.png';
+import logoConfianceConseilConstitutionnel from '../assets/logo-confiance-conseilconstitutionnel.png';
 
 const statsBar = [
   { val: '4,8/5',    label: 'Satisfaction' },
@@ -97,6 +107,19 @@ function Accueil() {
   const [recherche, setRecherche] = useState('');
   const navigate = useNavigate();
 
+  const references = [
+    { src: logoConfiancePresident, alt: 'Présidence de la République' },
+    { src: logoConfianceOrt, alt: 'ORT' },
+    { src: logoConfianceOrsys, alt: 'Orsys' },
+    { src: logoConfianceMga, alt: 'MGA' },
+    { src: logoConfianceM2i, alt: 'm2i Formation' },
+    { src: logoConfianceIsitech, alt: 'ISITECH' },
+    { src: logoConfianceFitech, alt: 'Fitech' },
+    { src: logoConfianceEdugroupe, alt: 'Edugroupe' },
+    { src: logoConfianceDelcoupe, alt: 'Delcoupe' },
+    { src: logoConfianceConseilConstitutionnel, alt: 'Conseil constitutionnel' },
+  ];
+
   const handleSearch = (e) => {
     e.preventDefault();
     if (recherche.trim()) {
@@ -144,6 +167,7 @@ function Accueil() {
               </button>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -230,8 +254,10 @@ function Accueil() {
         <div className="container">
           <h2>Ils nous font confiance</h2>
           <div className="refs-grid">
-            {['EduGroupe', 'MGA France', 'm2i Formation'].map(r => (
-              <div key={r} className="ref-logo">{r}</div>
+            {references.map(ref => (
+              <div key={ref.alt} className="ref-logo">
+                <img src={ref.src} alt={ref.alt} />
+              </div>
             ))}
           </div>
           <div className="certif-row">

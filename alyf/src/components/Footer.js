@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import logoAlyfBlanc from '../assets/logo-alyf-blanc-bleu.png';
 
 function Footer() {
   return (
@@ -8,7 +9,9 @@ function Footer() {
       <div className="footer-inner">
 
         <div className="footer-brand">
-          <div className="footer-logo">alyf<span>pro</span></div>
+          <div className="footer-logo">
+            <img src={logoAlyfBlanc} alt="ALYF Pro" />
+          </div>
           <p>Organisme de formation IT basé à Saint-Étienne, certifié Qualiopi et référencé Datadock depuis 2004.</p>
           <div className="footer-certifs">
             <span>Qualiopi</span>

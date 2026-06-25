@@ -14,14 +14,16 @@
 }
 
 .footer-logo {
-  font-size: 20px;
-  font-weight: 800;
-  color: #fff;
   margin-bottom: 12px;
-  letter-spacing: -0.5px;
+  display: inline-flex;
+  align-items: center;
 }
 
-.footer-logo span { color: #0077cc; }
+.footer-logo img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
 
 .footer-brand p {
   font-size: 13px;

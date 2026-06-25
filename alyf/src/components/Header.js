@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
+import logoAlyf from '../assets/logo-alyf-noir-bleu.png';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ function Header() {
       <header className="header">
         <div className="header-inner">
           <Link to="/" className="logo">
-            alyf<span>pro</span>
+            <img src={logoAlyf} alt="ALYF Pro" />
           </Link>
 
           <nav className={`nav ${menuOpen ? 'open' : ''}`}>
