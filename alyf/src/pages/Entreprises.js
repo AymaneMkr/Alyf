@@ -67,7 +67,6 @@ function Entreprises() {
             Depuis 2004, nos consultants accompagnent les entreprises dans la gestion,
             la sécurisation et la modernisation de leur système d'information.
           </p>
-          <Link to="/contact" className="btn-hero-ent">Demander un diagnostic gratuit</Link>
         </div>
       </section>
 
