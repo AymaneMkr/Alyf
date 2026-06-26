@@ -61,6 +61,7 @@
   font-size: 36px;
   display: block;
   margin-bottom: 14px;
+  color: #002147;
 }
 
 .modalite-card h3 {
@@ -112,6 +113,7 @@
   transform: translateY(-50%);
   font-size: 16px;
   pointer-events: none;
+  color: #002147;
 }
 
 .search-clear {
@@ -257,6 +259,7 @@
 
 .info-icon {
   font-size: 14px;
+  color: #002147;
 }
 
 .carte-btn {

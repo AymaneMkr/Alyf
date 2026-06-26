@@ -218,6 +218,7 @@
 .info-icon {
   font-size: 24px;
   flex-shrink: 0;
+  color: #002147;
 }
 
 .info-bloc h4 {
@@ -242,17 +243,17 @@
 .certif-bloc {
   display: flex;
   gap: 12px;
+  justify-content:space-around;
+  align-items: center;
 }
 
-.certif-badge {
+.certif-logo {
   flex: 1;
-  background: #002147;
-  color: #ffffff;
-  text-align: center;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 700;
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .map-placeholder {

@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import './NosFormations.css';
 import { useSearchParams } from 'react-router-dom';
+import UiIcon from '../components/UiIcon';
 
 // ── Données ──────────────────────────────────────────────
 const formations = [
@@ -62,10 +63,10 @@ const categorieColors = {
 };
 
 const modalites = [
-  { icon: "🏢", titre: "Intra-entreprise",    texte: "Formation dans vos locaux, adaptée à votre contexte et vos outils." },
-  { icon: "👥", titre: "Inter-entreprise",    texte: "Rejoignez un groupe dans nos locaux ou en distanciel." },
-  { icon: "🎯", titre: "Sur-mesure",          texte: "Programme entièrement personnalisé selon vos objectifs." },
-  { icon: "♿", titre: "Accessibilité",       texte: "Toutes nos formations sont adaptables aux situations de handicap." },
+  { icon: "building", titre: "Intra-entreprise", texte: "Formation dans vos locaux, adaptée à votre contexte et vos outils." },
+  { icon: "users", titre: "Inter-entreprise", texte: "Rejoignez un groupe dans nos locaux ou en distanciel." },
+  { icon: "target", titre: "Sur-mesure", texte: "Programme entièrement personnalisé selon vos objectifs." },
+  { icon: "accessibility", titre: "Accessibilité", texte: "Toutes nos formations sont adaptables aux situations de handicap." },
 ];
 
 // ── Composant carte ───────────────────────────────────────
@@ -83,10 +84,10 @@ function CarteFormation({ formation }) {
       <h3 className="carte-titre">{formation.titre}</h3>
       <div className="carte-infos">
         <span className="carte-info">
-          <span className="info-icon">⏱</span> {formation.duree}
+          <UiIcon name="clock" className="info-icon" /> {formation.duree}
         </span>
         <span className="carte-info">
-          <span className="info-icon">💶</span> {formation.tarif}
+          <span className="info-icon"></span> {formation.tarif}
         </span>
       </div>
       <a
@@ -131,7 +132,7 @@ function NosFormations() {
           <p>
             Des formations IT dispensées par des consultants confirmés,
             au plus près de la réalité terrain.
-            <strong> 36 formations</strong> disponibles dans 7 domaines.
+            <strong> Un catalogue complet</strong> disponible dans 7 domaines.
           </p>
         </div>
       </section>
@@ -143,7 +144,7 @@ function NosFormations() {
           <div className="modalites-grid">
             {modalites.map((m) => (
               <div key={m.titre} className="modalite-card">
-                <span className="modalite-icon">{m.icon}</span>
+                <UiIcon name={m.icon} className="modalite-icon" />
                 <h3>{m.titre}</h3>
                 <p>{m.texte}</p>
               </div>
@@ -159,7 +160,7 @@ function NosFormations() {
 
           {/* Barre de recherche */}
           <div className="search-bar">
-            <span className="search-icon">🔍</span>
+            <UiIcon name="search" className="search-icon" />
             <input
               type="text"
               placeholder="Rechercher une formation ou une référence..."

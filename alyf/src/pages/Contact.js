@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import UiIcon from '../components/UiIcon';
+import logoQualiopi from '../assets/logo-qualiopi.png';
+import logoDatadock from '../assets/logo-datadock.png';
 
 const sujets = [
   "Demande d'information sur une formation",
@@ -147,7 +150,7 @@ function Contact() {
               <h2>Nos coordonnées</h2>
 
               <div className="info-bloc">
-                <div className="info-icon">📍</div>
+                <UiIcon name="pin" className="info-icon" />
                 <div>
                   <h4>Adresse</h4>
                   <p>55 rue Charles de Gaulle<br />42000 Saint-Étienne</p>
@@ -155,7 +158,7 @@ function Contact() {
               </div>
 
               <div className="info-bloc">
-                <div className="info-icon">✉️</div>
+                <UiIcon name="mail" className="info-icon" />
                 <div>
                   <h4>Email</h4>
                   <a href="mailto:contact@alyfpro.fr">contact@alyfpro.fr</a>
@@ -163,7 +166,7 @@ function Contact() {
               </div>
 
               <div className="info-bloc">
-                <div className="info-icon">🕐</div>
+                <UiIcon name="clock" className="info-icon" />
                 <div>
                   <h4>Délai de réponse</h4>
                   <p>Nous répondons sous 24h ouvrées.</p>
@@ -171,8 +174,8 @@ function Contact() {
               </div>
 
               <div className="certif-bloc">
-                <div className="certif-badge">Qualiopi</div>
-                <div className="certif-badge">Datadock</div>
+                <img className="certif-logo" src={logoQualiopi} alt="Logo Qualiopi" />
+                <img className="certif-logo" src={logoDatadock} alt="Logo Datadock" />
               </div>
 
               {/* Carte Google Maps placeholder */}

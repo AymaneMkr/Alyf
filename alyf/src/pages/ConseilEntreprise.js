@@ -1,35 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ConseilEntreprise.css';
+import UiIcon from '../components/UiIcon';
 
 const services = [
   {
-    icon: '🖥️',
+    icon: 'monitor',
     titre: 'Assistance & Support',
     texte: "Intervention rapide sur site ou à distance pour résoudre vos incidents informatiques. Nos consultants assurent la continuité de votre activité avec réactivité et expertise.",
   },
   {
-    icon: '🔒',
+    icon: 'shield',
     titre: 'Sécurité informatique',
     texte: "Audit de votre infrastructure, mise en place de politiques de sécurité, gestion des accès et protection contre les cybermenaces. Nous sécurisons vos données et vos systèmes.",
   },
   {
-    icon: '☁️',
+    icon: 'cloud',
     titre: 'Migration Cloud',
     texte: "Accompagnement complet dans votre transition vers le Cloud : audit, planification, migration et suivi. Nous vous aidons à choisir la solution adaptée à votre organisation.",
   },
   {
-    icon: '🏗️',
+    icon: 'building',
     titre: 'Infrastructure IT',
     texte: "Conception, déploiement et optimisation de votre infrastructure réseau et serveurs. De la virtualisation à la gestion des postes de travail, nous intervenons à chaque étape.",
   },
   {
-    icon: '📋',
+    icon: 'briefcase',
     titre: 'Audit & Conseil',
     texte: "Analyse de l'existant, identification des risques et recommandations stratégiques. Nous vous aidons à prendre les bonnes décisions pour votre système d'information.",
   },
   {
-    icon: '🔄',
+    icon: 'refresh',
     titre: 'Maintenance préventive',
     texte: "Suivi régulier de vos équipements, mises à jour et contrôles de performance. Anticipez les pannes et prolongez la durée de vie de votre parc informatique.",
   },
@@ -67,7 +68,7 @@ function ConseilEntreprise() {
           <div className="services-grid">
             {services.map((s) => (
               <div key={s.titre} className="service-card">
-                <span className="service-icon">{s.icon}</span>
+                <UiIcon name={s.icon} className="service-icon" />
                 <h3>{s.titre}</h3>
                 <p>{s.texte}</p>
               </div>

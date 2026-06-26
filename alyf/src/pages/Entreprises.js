@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Entreprises.css';
+import UiIcon from '../components/UiIcon';
 
 const onglets = [
   {
     id: 'conseil',
-    label: '🏢 Conseil IT',
+    label: 'Conseil IT',
     titre: 'Votre partenaire IT de confiance',
     accroche: "Nous accompagnons les PME et ETI dans la gestion, l'évolution et la sécurisation de leur système d'information.",
     services: [
-      { icon: '🖥️', titre: 'Assistance & Support', texte: "Intervention rapide sur site ou à distance pour résoudre vos incidents et garantir la continuité de votre activité." },
-      { icon: '🔒', titre: 'Sécurité informatique', texte: "Audit, politiques de sécurité, gestion des accès et protection contre les cybermenaces." },
-      { icon: '☁️', titre: 'Migration Cloud', texte: "Audit, planification et migration vers le Cloud avec suivi complet par nos experts." },
-      { icon: '🏗️', titre: 'Infrastructure IT', texte: "Conception, déploiement et optimisation de votre réseau, serveurs et postes de travail." },
-      { icon: '📋', titre: 'Audit & Conseil', texte: "Analyse de l'existant, identification des risques et recommandations stratégiques pour votre SI." },
-      { icon: '🔄', titre: 'Maintenance préventive', texte: "Suivi régulier, mises à jour et contrôles de performance pour anticiper les pannes." },
+      { icon: 'monitor', titre: 'Assistance & Support', texte: "Intervention rapide sur site ou à distance pour résoudre vos incidents et garantir la continuité de votre activité." },
+      { icon: 'shield', titre: 'Sécurité informatique', texte: "Audit, politiques de sécurité, gestion des accès et protection contre les cybermenaces." },
+      { icon: 'cloud', titre: 'Migration Cloud', texte: "Audit, planification et migration vers le Cloud avec suivi complet par nos experts." },
+      { icon: 'building', titre: 'Infrastructure IT', texte: "Conception, déploiement et optimisation de votre réseau, serveurs et postes de travail." },
+      { icon: 'briefcase', titre: 'Audit & Conseil', texte: "Analyse de l'existant, identification des risques et recommandations stratégiques pour votre SI." },
+      { icon: 'refresh', titre: 'Maintenance préventive', texte: "Suivi régulier, mises à jour et contrôles de performance pour anticiper les pannes." },
     ],
     atouts: [
       "Plus de 20 ans d'expérience dans l'IT",
@@ -26,13 +27,13 @@ const onglets = [
   },
   {
     id: 'integration',
-    label: '🔧 Intégration',
+    label: 'Intégration',
     titre: 'Des solutions IT intégrées clé en main',
     accroche: "Infrastructure, cybersécurité, Cloud : nous concevons et déployons des solutions sur mesure pour moderniser votre système d'information.",
     services: [
-      { icon: '🏗️', titre: 'Infrastructure Service', texte: "Virtualisation (VMware, Hyper-V), stockage, réseau, haute disponibilité et supervision." },
-      { icon: '🔐', titre: 'Cybersecurity Service', texte: "Audit de vulnérabilités, pare-feux, gestion des identités, sécurisation des postes et réponse aux incidents." },
-      { icon: '☁️', titre: 'Cloud Service', texte: "Migration Azure, architecture hybride, optimisation des coûts, sauvegarde et reprise d'activité." },
+      { icon: 'building', titre: 'Infrastructure Service', texte: "Virtualisation (VMware, Hyper-V), stockage, réseau, haute disponibilité et supervision." },
+      { icon: 'shield', titre: 'Cybersecurity Service', texte: "Audit de vulnérabilités, pare-feux, gestion des identités, sécurisation des postes et réponse aux incidents." },
+      { icon: 'cloud', titre: 'Cloud Service', texte: "Migration Azure, architecture hybride, optimisation des coûts, sauvegarde et reprise d'activité." },
     ],
     atouts: [
       "Expertise Microsoft Azure certifiée",
@@ -80,6 +81,7 @@ function Entreprises() {
                 className={`onglet-tab ${actif === o.id ? 'actif' : ''}`}
                 onClick={() => setActif(o.id)}
               >
+                <UiIcon name={o.id === 'conseil' ? 'building' : 'cloud'} className="onglet-icon" />
                 {o.label}
               </button>
             ))}
@@ -97,7 +99,7 @@ function Entreprises() {
             <div className="services-mini-grid">
               {onglet.services.map(s => (
                 <div key={s.titre} className="service-mini">
-                  <span className="service-mini-icon">{s.icon}</span>
+                  <UiIcon name={s.icon} className="service-mini-icon" />
                   <h4>{s.titre}</h4>
                   <p>{s.texte}</p>
                 </div>

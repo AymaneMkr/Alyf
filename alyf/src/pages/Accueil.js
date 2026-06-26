@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Accueil.css';
+import UiIcon from '../components/UiIcon';
 import logoConfiancePresident from '../assets/logo-confiance-president.jpg';
 import logoConfianceOrt from '../assets/logo-confiance-ort.png';
 import logoConfianceOrsys from '../assets/logo-confiance-orsys.jpg';
@@ -46,13 +47,13 @@ const niveauColors = {
 };
 
 const univers = [
-  { icon: '🖥️', label: 'Poste de travail',  count: 5,  desc: 'Windows 10, déploiement, sécurité et support.' },
-  { icon: '🐧', label: 'Linux',             count: 4,  desc: 'Fondamentaux, administration Debian, Shell Bash.' },
-  { icon: '📧', label: 'Messagerie',        count: 4,  desc: 'Exchange Server 2016 et 2019.' },
-  { icon: '🖧', label: 'Windows Serveur',   count: 10, desc: 'WS 2016 et 2019, administration, sécurité, Docker.' },
-  { icon: '☁️', label: 'Microsoft 365',    count: 5,  desc: 'Administration, sécurité, migration Cloud.' },
-  { icon: '⚙️', label: 'DevOps',           count: 2,  desc: 'Culture DevOps et nouveaux outils.' },
-  { icon: '🌐', label: 'Cloud',            count: 6,  desc: 'Azure, gouvernance, migration, architecture multi-cloud.' },
+  { icon: 'monitor', label: 'Poste de travail', count: 5, desc: 'Windows 10, déploiement, sécurité et support.' },
+  { icon: 'linux', label: 'Linux', count: 4, desc: 'Fondamentaux, administration Debian, Shell Bash.' },
+  { icon: 'mail', label: 'Messagerie', count: 4, desc: 'Exchange Server 2016 et 2019.' },
+  { icon: 'server', label: 'Windows Serveur', count: 10, desc: 'WS 2016 et 2019, administration, sécurité, Docker.' },
+  { icon: 'cloud', label: 'Microsoft 365', count: 5, desc: 'Administration, sécurité, migration Cloud.' },
+  { icon: 'gear', label: 'DevOps', count: 2, desc: 'Culture DevOps et nouveaux outils.' },
+  { icon: 'cloud', label: 'Cloud', count: 6, desc: 'Azure, gouvernance, migration, architecture multi-cloud.' },
 ];
 
 const faq = [
@@ -79,11 +80,11 @@ function CarteFormationVedette({ f }) {
       </div>
       <h3 className="carte-titre">{f.titre}</h3>
       <div className="carte-meta">
-        <span>⏱ {f.duree}</span>
-        <span>💶 {f.tarif}</span>
+        <span className="carte-info"><UiIcon name="clock" className="carte-icon" />{f.duree}</span>
+        <span>{f.tarif}</span>
       </div>
       <div className="carte-actions">
-        <Link to="/nos-formations" className="btn-voir">Voir la formation</Link>
+        <Link to="/nos-formations" className="btn-voir">Voir le catalogue</Link>
         <Link to="/contact" className="btn-devis">Demander un devis</Link>
       </div>
     </div>
@@ -139,13 +140,12 @@ function Accueil() {
           <h1>La formation IT qui fait<br />progresser vos équipes.</h1>
           <p>
             Infrastructure, Cloud, Microsoft 365, Linux, DevOps et messagerie :
-            un catalogue de <strong>36 formations</strong> dispensées par des consultants
+            un catalogue structuré de formations dispensées par des consultants
             confirmés, au plus près de la réalité terrain.
           </p>
 
-          {/* Recherche */}
           <form className="hero-search" onSubmit={handleSearch}>
-            <span className="search-ico">🔍</span>
+            <UiIcon name="search" className="search-ico" />
             <input
               type="text"
               placeholder="Rechercher une formation (ex: Azure, Windows Server, Linux...)"
@@ -155,7 +155,6 @@ function Accueil() {
             <button type="submit">Rechercher</button>
           </form>
 
-          {/* Tags rapides */}
           <div className="hero-tags">
             {['Windows Server', 'Azure', 'Linux', 'Exchange', 'DevOps', 'Microsoft 365'].map(tag => (
               <button
@@ -189,7 +188,7 @@ function Accueil() {
               <span className="section-eyebrow">Formations les plus demandées</span>
               <h2>Une sélection pour les besoins les plus courants.</h2>
             </div>
-            <Link to="/nos-formations" className="voir-tout">Explorer tout le catalogue →</Link>
+            <Link to="/nos-formations" className="voir-tout">Voir le catalogue →</Link>
           </div>
           <div className="vedette-grid">
             {formationsVedette.map(f => <CarteFormationVedette key={f.ref} f={f} />)}
@@ -209,7 +208,7 @@ function Accueil() {
                 key={u.label}
                 className="univers-card"
               >
-                <span className="univers-icon">{u.icon}</span>
+                <UiIcon name={u.icon} className="univers-icon" />
                 <div className="univers-info">
                   <strong>{u.label}</strong>
                   <span>{u.count} formation{u.count > 1 ? 's' : ''}</span>
@@ -226,8 +225,8 @@ function Accueil() {
         <div className="container">
           <div className="chiffres-grid">
             <div className="chiffre">
-              <span className="chiffre-val">36</span>
-              <span className="chiffre-lab">formations au catalogue</span>
+              <span className="chiffre-val">Catalogue</span>
+              <span className="chiffre-lab">formations disponibles</span>
               <p>Infrastructure, Cloud, messagerie, Linux, DevOps et Microsoft 365.</p>
             </div>
             <div className="chiffre">
@@ -290,7 +289,7 @@ function Accueil() {
           <p>Intra, inter ou sur-mesure : construisons ensemble le dispositif adapté à vos besoins et votre budget.</p>
           <div className="cta-buttons">
             <Link to="/contact" className="btn-primary">Demander un devis</Link>
-            <Link to="/nos-formations" className="btn-outline">Explorer le catalogue</Link>
+            <Link to="/nos-formations" className="btn-outline">Voir le catalogue</Link>
           </div>
         </div>
       </section>

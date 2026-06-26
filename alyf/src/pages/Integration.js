@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Integration.css';
+import UiIcon from '../components/UiIcon';
 
 const domaines = [
   {
     id: 'infrastructure',
-    icon: '🏗️',
+    icon: 'building',
     titre: 'Infrastructure Service',
     accroche: "Concevez et déployez une infrastructure robuste, évolutive et adaptée à vos enjeux.",
     description: "Nous intervenons sur la conception, le déploiement et l'optimisation de vos infrastructures informatiques. Virtualisation, stockage, réseau, haute disponibilité : nos équipes maîtrisent l'ensemble du spectre technique pour vous garantir une infrastructure fiable et performante.",
@@ -20,7 +21,7 @@ const domaines = [
   },
   {
     id: 'cybersecurite',
-    icon: '🔐',
+    icon: 'shield',
     titre: 'Cybersecurity Service',
     accroche: "Protégez vos données, vos systèmes et vos utilisateurs face aux cybermenaces.",
     description: "La cybersécurité est au cœur de chaque projet que nous menons. Nous réalisons des audits de sécurité, mettons en place des politiques de protection et accompagnons vos équipes pour faire face aux risques actuels. Notre approche est proactive : anticiper plutôt que subir.",
@@ -35,7 +36,7 @@ const domaines = [
   },
   {
     id: 'cloud',
-    icon: '☁️',
+    icon: 'cloud',
     titre: 'Cloud Service',
     accroche: "Migrez vers le Cloud sereinement, avec une stratégie adaptée à votre organisation.",
     description: "Que vous souhaitiez migrer vers Microsoft Azure, adopter une architecture hybride ou optimiser vos coûts Cloud, nos experts vous accompagnent à chaque étape. Nous construisons avec vous une stratégie Cloud cohérente, sécurisée et alignée sur vos objectifs métier.",
@@ -83,7 +84,7 @@ function Integration() {
                 className={`tab-btn ${actif === d.id ? 'actif' : ''}`}
                 onClick={() => setActif(d.id)}
               >
-                <span>{d.icon}</span> {d.titre}
+                <UiIcon name={d.icon} className="tab-icon" /> {d.titre}
               </button>
             ))}
           </div>
