@@ -12,7 +12,7 @@ function Footer() {
           <div className="footer-logo">
             <img src={logoAlyfBlanc} alt="ALYF Pro" />
           </div>
-          <p>Organisme de formation IT basé à Saint-Étienne, certifié Qualiopi et référencé Datadock depuis 2004.</p>
+          <p>Organisme de formation IT basé à Saint-Étienne, certifié Qualiopi et référencé Datadock.</p>
           <div className="footer-certifs">
             <span>Qualiopi</span>
             <span>Datadock</span>
@@ -27,14 +27,6 @@ function Footer() {
           <Link to="/nos-formations?cat=Cloud">Cloud & Azure</Link>
           <Link to="/nos-formations?cat=Linux">Linux</Link>
           <Link to="/nos-formations?cat=DevOps">DevOps</Link>
-        </div>
-
-        <div className="footer-col">
-          <h4>Entreprise</h4>
-          <Link to="/entreprises">Conseil IT</Link>
-          <Link to="/entreprises">Intégration</Link>
-          <Link to="/contact">Demander un devis</Link>
-          <Link to="/contact">Contact</Link>
         </div>
 
         <div className="footer-col">

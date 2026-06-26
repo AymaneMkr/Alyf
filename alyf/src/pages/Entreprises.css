@@ -18,6 +18,7 @@
 .ent-hero {
   background: linear-gradient(135deg, #001a3a 0%, #002d5c 100%);
   padding: 100px 24px 80px;
+  text-align: center;
 }
 
 .ent-hero h1 {
@@ -32,9 +33,10 @@
 .ent-hero p {
   font-size: 17px;
   color: #a0bdd8;
-  max-width: 560px;
+  max-width: 800px;
   line-height: 1.75;
   margin-bottom: 32px;
+  margin: 0 auto 32px;
 }
 
 .btn-hero-ent {

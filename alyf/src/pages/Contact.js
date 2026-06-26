@@ -45,7 +45,6 @@ function Contact() {
       {/* HERO */}
       <section className="contact-hero">
         <div className="container">
-          <span className="hero-eyebrow">Contact</span>
           <h1>Parlons de votre projet</h1>
           <p>
             Une question, un projet de formation ou une demande de conseil ?

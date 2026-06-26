@@ -78,12 +78,23 @@ function UiIcon({ name, className = '', title, ...props }) {
         <path d="M9 8h2M13 8h2M9 12h2M13 12h2M9 16h2M13 16h2" />
       </>
     ),
-    users: (
+    globe: (
       <>
-        <circle cx="9" cy="9" r="3" />
-        <path d="M4.5 20c.8-3 3-5 4.5-5s3.7 2 4.5 5" />
-        <circle cx="17" cy="10" r="2.5" />
-        <path d="M14.7 20c.5-1.8 1.9-3.2 3.2-3.2" />
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+        <path d="M2 12h20" />
+      </>
+    ),
+    wheelchair: (
+      <>
+        {/* Tête */}
+        <circle cx="9.5" cy="4.5" r="2" fill="currentColor" stroke="none" />
+        {/* Roue */}
+        <path d="M15 16.5a5.5 5.5 0 1 1-6.5-5.5" />
+        {/* Corps : dos, assise, jambe, pied */}
+        <path d="M9.5 7.5v7h4.5l2.5 5h2" />
+        {/* Bras */}
+        <path d="M9.5 11.5h4.5" />
       </>
     ),
     target: (
@@ -91,14 +102,6 @@ function UiIcon({ name, className = '', title, ...props }) {
         <circle cx="12" cy="12" r="8" />
         <circle cx="12" cy="12" r="4" />
         <circle cx="12" cy="12" r="1.2" />
-      </>
-    ),
-    accessibility: (
-      <>
-        <circle cx="12" cy="5" r="1.6" />
-        <path d="M12 7.5v4.5l-3 3" />
-        <path d="M12 12l3 2" />
-        <path d="M9.5 21l2.5-4 2 4" />
       </>
     ),
     shield: (

@@ -17,6 +17,7 @@
 .formations-hero {
   background-color: #002147;
   padding: 100px 24px 80px;
+  text-align : center;
 }
 
 .formations-hero h1 {
@@ -29,8 +30,9 @@
 .formations-hero p {
   font-size: 18px;
   color: #c5d5e8;
-  max-width: 600px;
+  max-width: 800px;
   line-height: 1.7;
+  margin: 0 auto;
 }
 
 .formations-hero strong {
@@ -53,22 +55,29 @@
   background: #ffffff;
   border-radius: 12px;
   padding: 28px 24px;
-  text-align: center;
+  text-align: left; /* Aligné à gauche pour un rendu plus propre */
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
+/* Nouvelle classe pour gérer l'alignement horizontal */
+.modalite-header {
+  display: flex;
+  align-items: center; /* Centre verticalement l'icône et le texte */
+  gap: 12px; /* Espace entre l'icône et le texte */
+  margin-bottom: 12px;
+}
+
 .modalite-icon {
-  font-size: 36px;
-  display: block;
-  margin-bottom: 14px;
+  font-size: 32px; /* Légèrement réduit pour mieux coller au texte */
   color: #002147;
+  /* On enlève le display: block et le margin-bottom qui cassaient la ligne */
 }
 
 .modalite-card h3 {
   font-size: 16px;
   font-weight: 700;
   color: #002147;
-  margin-bottom: 8px;
+  margin-bottom: 0; /* On enlève la marge pour bien centrer verticalement */
 }
 
 .modalite-card p {

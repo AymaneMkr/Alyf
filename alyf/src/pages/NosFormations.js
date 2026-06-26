@@ -64,9 +64,9 @@ const categorieColors = {
 
 const modalites = [
   { icon: "building", titre: "Intra-entreprise", texte: "Formation dans vos locaux, adaptée à votre contexte et vos outils." },
-  { icon: "users", titre: "Inter-entreprise", texte: "Rejoignez un groupe dans nos locaux ou en distanciel." },
+  { icon: "globe", titre: "Inter-entreprise", texte: "Rejoignez un groupe dans nos locaux ou en distanciel." },
   { icon: "target", titre: "Sur-mesure", texte: "Programme entièrement personnalisé selon vos objectifs." },
-  { icon: "accessibility", titre: "Accessibilité", texte: "Toutes nos formations sont adaptables aux situations de handicap." },
+  { icon: "wheelchair", titre: "Accessibilité", texte: "Toutes nos formations sont adaptables aux situations de handicap." },
 ];
 
 // ── Composant carte ───────────────────────────────────────
@@ -144,8 +144,10 @@ function NosFormations() {
           <div className="modalites-grid">
             {modalites.map((m) => (
               <div key={m.titre} className="modalite-card">
-                <UiIcon name={m.icon} className="modalite-icon" />
-                <h3>{m.titre}</h3>
+                <div className="modalite-header">
+                  <UiIcon name={m.icon} className="modalite-icon" />
+                  <h3>{m.titre}</h3>
+                </div>
                 <p>{m.texte}</p>
               </div>
             ))}

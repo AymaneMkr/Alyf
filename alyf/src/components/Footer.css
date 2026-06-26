@@ -7,9 +7,11 @@
 .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 64px 24px 40px;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 64px 0px 40px;
+  
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si l'écran rétrécit */
+  justify-content: space-around; /* Centre le groupe avec un espace égal autour de chaque div */
   gap: 48px;
 }
 
@@ -30,6 +32,7 @@
   line-height: 1.7;
   color: #5a7f9c;
   margin-bottom: 16px;
+  max-width: 350px; /* Remplace le comportement de ton ancien "2fr" */
 }
 
 .footer-certifs {
@@ -97,11 +100,30 @@
 
 .footer-legal a:hover { color: #fff; }
 
+/* ── Responsive Flexbox ── */
 @media (max-width: 900px) {
-  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .footer-inner {
+    justify-content: space-between;
+  }
+  
+  /* Force les divs à prendre environ 40% de la largeur pour passer sur 2 colonnes */
+  .footer-inner > div {
+    flex: 1 1 40%; 
+  }
 }
 
 @media (max-width: 600px) {
-  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
-  .footer-legal { flex-direction: column; text-align: center; }
+  .footer-inner {
+    flex-direction: column; /* Empile tout à la verticale sur mobile */
+    gap: 32px;
+  }
+  
+  .footer-inner > div {
+    flex: 1 1 100%;
+  }
+  
+  .footer-legal {
+    flex-direction: column;
+    text-align: center;
+  }
 }

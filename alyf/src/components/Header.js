@@ -8,7 +8,7 @@ function Header() {
   const location = useLocation();
 
   const navLinks = [
-    { path: '/nos-formations', label: 'Formations' },
+    { path: '/nos-formations', label: 'Catalogue' },
     { path: '/entreprises',    label: 'Entreprises' },
     { path: '/contact',        label: 'Contact' },
   ];

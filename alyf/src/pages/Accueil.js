@@ -136,8 +136,7 @@ function Accueil() {
       {/* ── HERO ── */}
       <section className="hero">
         <div className="hero-inner">
-          <div className="hero-badge">Organisme de formation · Certifié Qualiopi</div>
-          <h1>La formation IT qui fait<br />progresser vos équipes.</h1>
+          <h1>La formation IT qui fait progresser vos équipes.</h1>
           <p>
             Infrastructure, Cloud, Microsoft 365, Linux, DevOps et messagerie :
             un catalogue structuré de formations dispensées par des consultants

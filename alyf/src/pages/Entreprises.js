@@ -62,8 +62,7 @@ function Entreprises() {
       {/* HERO */}
       <section className="ent-hero">
         <div className="container">
-          <span className="eyebrow">Solutions Entreprise</span>
-          <h1>Conseil IT & Intégration<br />pour PME et ETI</h1>
+          <h1>Conseil IT & Intégration pour PME et ETI</h1>
           <p>
             Depuis 2004, nos consultants accompagnent les entreprises dans la gestion,
             la sécurisation et la modernisation de leur système d'information.

@@ -1,3 +1,9 @@
+:root {
+  --topbar-h: 36px;
+  --header-h: 68px;
+  --stats-h: 81px;
+}
+
 .accueil .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -47,16 +53,15 @@
 /* ── Hero ── */
 .hero {
   background: linear-gradient(135deg, #001a3a 0%, #002d5c 100%);
-  min-height: 81vh;
-  padding: 72px 24px 72px;
+  height: calc(100.1vh - var(--topbar-h) - var(--header-h) - var(--stats-h)); 
+  padding: 72px 24px;
   display: flex;
   align-items: center;
 }
 
 .hero-inner {
-  max-width: 760px;
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
   text-align: center;
 }
 
@@ -73,22 +78,23 @@
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.15;
   margin-bottom: 20px;
   letter-spacing: -1px;
+  width : 100%
 }
 
 .hero p {
-  font-size: 17px;
+  font-size: 20px;
   color: #a0bdd8;
   line-height: 1.75;
   margin-bottom: 36px;
-  max-width: 580px;
   margin-left: auto;
   margin-right: auto;
+  width : 100%
 }
 
 .hero p strong { color: #fff; }
@@ -100,8 +106,7 @@
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  max-width: 620px;
-  margin: 0 auto 20px;
+  margin: 0 50px 20px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   position: relative;
 }
@@ -166,6 +171,7 @@
 
 /* ── Stats bar ── */
 .stats-bar {
+  height: var(--stats-h);
   background: #001530;
   display: flex;
   justify-content: center;
@@ -625,4 +631,11 @@
   .faq-inner { grid-template-columns: 1fr; gap: 40px; }
   .stats-bar { flex-direction: column; }
   .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: calc(100vh - var(--header-h) - var(--stats-h)); /* plus de topbar sur mobile */
+    padding: 48px 24px;
+  }
 }
