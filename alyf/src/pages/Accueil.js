@@ -12,6 +12,9 @@ import logoConfianceFitech from '../assets/logo-confiance-fitech.png';
 import logoConfianceEdugroupe from '../assets/logo-confiance-edugroupe.png';
 import logoConfianceDelcoupe from '../assets/logo-confiance-delcoupe.png';
 import logoConfianceConseilConstitutionnel from '../assets/logo-confiance-conseilconstitutionnel.png';
+import logoQualiopi from '../assets/logo-qualiopi.png';
+import logoDatadock from '../assets/logo-datadock.png';
+import logoOpco from '../assets/logo-opco.png'
 
 const statsBar = [
   { val: '4,8/5',    label: 'Satisfaction' },
@@ -258,10 +261,13 @@ function Accueil() {
               </div>
             ))}
           </div>
-          <div className="certif-row">
-            <div className="certif-pill">✓ Qualiopi</div>
-            <div className="certif-pill">✓ Datadock</div>
-            <div className="certif-pill">✓ OPCO éligible</div>
+          <div className="certif-section">
+            <p className="certif-label">Organisme certifié et référencé</p>
+            <div className="certif-row">
+              <img src={logoQualiopi} alt="Certification Qualiopi" className="certif-img" />
+              <img src={logoDatadock} alt="Référencement Datadock" className="certif-img" />
+              <img src={logoOpco} alt="Opco" className="certif-img" />
+            </div>
           </div>
         </div>
       </section>

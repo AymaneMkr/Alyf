@@ -6,6 +6,7 @@ import Accueil from './pages/Accueil';
 import NosFormations from './pages/NosFormations';
 import Entreprises from './pages/Entreprises';
 import Contact from './pages/Contact';
+import Devis from './pages/Devis';
 import './App.css';
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/"                element={<Accueil />} />
-          <Route path="/nos-formations"  element={<NosFormations />} />
-          <Route path="/entreprises"     element={<Entreprises />} />
-          <Route path="/contact"         element={<Contact />} />
+          <Route path="/"               element={<Accueil />} />
+          <Route path="/nos-formations" element={<NosFormations />} />
+          <Route path="/entreprises"    element={<Entreprises />} />
+          <Route path="/contact"        element={<Contact />} />
+          <Route path="/devis"          element={<Devis />} />
         </Routes>
       </main>
       <Footer />

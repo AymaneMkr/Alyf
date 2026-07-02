@@ -38,7 +38,7 @@ function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link to="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
+            <Link to="/devis" className="nav-cta" onClick={() => setMenuOpen(false)}>
               Demander un devis
             </Link>
           </nav>
